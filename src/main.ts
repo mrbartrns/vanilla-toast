@@ -1,24 +1,21 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter'
+import Toast from './Toast'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+const $app = document.querySelector('#app');
+
+$app.innerHTML = `
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
+    <button id="toast-btn-1000">Toast 1000ms</button>
+    <button id="toast-btn-2000">Toast 2000ms</button>
   </div>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+const $toastBtn1000 = document.querySelector('#toast-btn-1000')
+const $toastBtn2000 = document.querySelector('#toast-btn-2000')
+
+$toastBtn1000.addEventListener('click', () => {
+  Toast('hello, world!', 1000)
+})
+$toastBtn2000.addEventListener('click', () => {
+  Toast('hello, world!', 2000)
+})
