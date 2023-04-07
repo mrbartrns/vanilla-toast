@@ -1,7 +1,7 @@
 {
-  "name": "exalteddimplednetworking",
-  "private": true,
-  "version": "0.0.0",
+  "name": "vanilla-toast",
+  "license": "MIT License",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
